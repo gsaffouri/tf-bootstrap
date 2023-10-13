@@ -6,13 +6,24 @@ terraform {
     }
   }
   required_version = "~> 1.5.0"
+
+  # Remote State File Configs Start
+  # Uncomment and re-run after resources are created
+#   backend "s3" {
+#     bucket         = "terraform-20231013001906846700000001" # Update with bucket name after it is created
+#     key            = "state/terraform.tfstate"
+#     region         = "us-east-1"
+#     encrypt        = true
+#     dynamodb_table = "terraform_state"
+#   }
+  # Remote State File Configs End
 }
 
 provider "aws" {
   # Configuration options
 }
 
-resource "aws_s3_bucket" "backend" {
+resource "aws_s3_bucket" "backend" { 
   tags = {
     Name        = "backend_bucket"
     Environment = "Dev"
