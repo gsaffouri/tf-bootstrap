@@ -7,8 +7,7 @@ terraform {
   }
   required_version = "~> 1.5.0"
 
-  # Remote State File Configs Start
-  ## Uncomment and re-run after resources are created
+  ## Uncomment block BELOW and re-run after resources are created ##
   backend "s3" {
     bucket         = "terraform-20231015154326494700000001" # Update with bucket name after it is created
     key            = "state/terraform.tfstate"
@@ -16,7 +15,8 @@ terraform {
     encrypt        = true
     dynamodb_table = "terraform_state"
   }
-  ## Remote State File Configs End
+  ## Uncomment block ABOVE and re-run after resources are created ##
+
 }
 
 provider "aws" {
