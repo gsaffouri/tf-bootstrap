@@ -10,7 +10,7 @@ terraform {
   # Remote State File Configs Start
   # Uncomment and re-run after resources are created
   backend "s3" {
-    bucket         = "terraform-20231013120105412600000001" # Update with bucket name after it is created
+    bucket         = "terraform-20231015122022485100000001" # Update with bucket name after it is created
     key            = "state/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
