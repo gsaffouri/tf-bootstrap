@@ -8,4 +8,5 @@ module "oidc-github" {
     "chadwickcloudservices/amazon-eks:ref:refs/heads/main",
     # "another-org/another-repo:ref:refs/heads/main",
   ]
+  attach_admin_policy = true
 }
