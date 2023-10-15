@@ -23,7 +23,7 @@ provider "aws" {
   # Configuration options
 }
 
-resource "aws_s3_bucket" "backend" { 
+resource "aws_s3_bucket" "backend" {
   tags = {
     Name        = "backend_bucket"
     Environment = "Dev"
