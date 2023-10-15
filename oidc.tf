@@ -5,7 +5,7 @@ module "oidc-github" {
   github_repositories = [
     # "https://github.com/2ndLetter/amazon-eks",
     # "git@github.com:chadwickcloudservices/amazon-eks.git",
-    "chadwickcloudservices/amazon-eks",
+    "chadwickcloudservices/amazon-eks:ref:refs/heads/main",
     # "another-org/another-repo:ref:refs/heads/main",
   ]
 }
