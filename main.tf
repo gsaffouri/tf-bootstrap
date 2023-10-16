@@ -8,13 +8,15 @@ terraform {
   required_version = "~> 1.5.0"
 
   ## Uncomment block BELOW and re-run after resources are created ##
+  
   backend "s3" {
-    bucket         = "terraform-20231015154326494700000001" # Update with bucket name after it is created
+    bucket         = "_UPDATE_ME_WITH_BUCKET_NAME_" # Update with bucket name after it is created
     key            = "state/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
     dynamodb_table = "terraform_state"
   }
+  
   ## Uncomment block ABOVE and re-run after resources are created ##
 
 }
