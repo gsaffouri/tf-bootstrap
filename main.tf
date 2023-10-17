@@ -15,10 +15,8 @@ terraform {
   #   region         = "us-east-1"
   #   encrypt        = true
   #   dynamodb_table = "terraform_state"
-  }
   
   ## Uncomment block ABOVE and re-run after resources are created ##
-
 }
 
 provider "aws" {
