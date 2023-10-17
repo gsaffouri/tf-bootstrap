@@ -9,12 +9,12 @@ terraform {
 
   ## Uncomment block BELOW and re-run after resources are created ##
   
-  backend "s3" {
-    bucket         = "_UPDATE_ME_WITH_BUCKET_NAME_" # Update with bucket name after it is created
-    key            = "state/terraform.tfstate"
-    region         = "us-east-1"
-    encrypt        = true
-    dynamodb_table = "terraform_state"
+  # backend "s3" {
+  #   bucket         = "_UPDATE_ME_WITH_BUCKET_NAME_" # Update with bucket name after it is created
+  #   key            = "state/terraform.tfstate"
+  #   region         = "us-east-1"
+  #   encrypt        = true
+  #   dynamodb_table = "terraform_state"
   }
   
   ## Uncomment block ABOVE and re-run after resources are created ##
