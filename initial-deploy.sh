@@ -11,8 +11,6 @@ terraform apply --auto-approve
 
 BUCKET_NAME=$(terraform output -raw aws_s3_bucket)
 
-printf "BUCKET_NAME = $BUCKET_NAME\n"
-
 cp resources/main-remote-backend.tf main.tf
 
 sed -i "s/UPDATE_ME/$BUCKET_NAME/g" main.tf
