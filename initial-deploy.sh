@@ -3,6 +3,8 @@
 # Only run this script once during initial bootstrapping
 # You will see a "Backend configuration changed" error notification if you re-run
 
+./cleanup_tf.sh
+
 cp resources/main-local-backend.tf main.tf
 
 terraform init
