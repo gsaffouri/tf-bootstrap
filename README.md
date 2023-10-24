@@ -32,22 +32,17 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 | ------------------------------------------------------------------------------------|-------|
 | [oidc-github](https://registry.terraform.io/modules/unfunco/oidc-github/aws/latest) | 1.6.0 |
 
+## References:
 
-
-
-References:
- - tbd
+ - [Terraform remote state management]
+ - [GitHub Actions]
 
 License:
  - tbd
 
 
-Terraform remote state management docs: https://developer.hashicorp.com/terraform/language/v1.5.x/settings/backends/s3
 
-Terraform modules used: https://registry.terraform.io/modules/unfunco/oidc-github/aws/latest
-
-
-
+[terraform remote state management]: https://developer.hashicorp.com/terraform/language/v1.5.x/settings/backends/s3
 [aws provider]: https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 [terraform]: https://www.terraform.io
 [tls provider]: https://registry.terraform.io/providers/hashicorp/tls/latest/docs
