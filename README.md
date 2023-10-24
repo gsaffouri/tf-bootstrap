@@ -37,10 +37,9 @@ or
 terraform output -raw aws_s3_bucket
 ```
 
-### Screenshot
+### Example Output
 
-![alt text](../resources/tf-bootstrap.png)
-
+![alt text](resources/tf-bootstrap.png)
 
 ## Resources
 
