@@ -26,9 +26,15 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 ./deploy-tf.sh -p
 ```
 3. The AWS account is now ready to properly store Terraform state files
-4. You can return the AWS S3 bucket name using this command
+4. You can return the AWS S3 bucket name using either of the below commands
 ```bash
+# aws cli
 aws s3 ls | grep terraform-remote-state | cut -d " " -f 3
+
+or
+
+# terraform cli
+terraform output -raw aws_s3_bucket
 ```
 
 ## Resources
