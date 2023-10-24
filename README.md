@@ -36,6 +36,17 @@ or
 # terraform cli
 terraform output -raw aws_s3_bucket
 ```
+5. deploy-tf.sh full functionality
+```bash
+# 'p' flag is used for initial deployment
+./deploy-tf.sh -p
+
+# 'f' flag is used by GitHub Actions to terraform fmt
+./deploy-tf.sh -f
+
+# 'u' flag is used to prepare the main.tf file for existing deployments
+./deploy-tf.sh -u
+```
 
 ### Example Output
 
