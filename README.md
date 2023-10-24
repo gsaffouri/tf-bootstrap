@@ -25,7 +25,11 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 ```bash
 ./deploy-tf.sh -p
 ```
-3. Refer to amazon-eks 
+3. The AWS account is now ready to properly store Terraform state files
+4. You can return the AWS S3 bucket name using this command
+```bash
+aws s3 ls | grep terraform-remote-state | cut -d " " -f 3
+```
 
 ## Resources
 
