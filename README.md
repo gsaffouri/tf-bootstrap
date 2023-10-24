@@ -10,12 +10,12 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 - [TLS Provider] ~> 3.0
 - [Terraform] ~> 1.5.0
 
-### Installation and usage:
+### Installation and usage
 1. Authenticate to aws account
 2. Run deploy-tf.sh script
 3. Refer to amazon-eks 
 
-## Resources:
+## Resources
 
 | Name                                                                                                                                                 | Type        |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
@@ -26,23 +26,24 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 | [aws_s3_bucket_versioning.backend](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_versioning)                 | resource    |
 | [random_id.this](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/id)                                                  | resource    |
 
-## External Modules:
+## External Modules
 
 | Name | Version |
 | ------------------------------------------------------------------------------------|-------|
 | [oidc-github](https://registry.terraform.io/modules/unfunco/oidc-github/aws/latest) | 1.6.0 |
 
-## References:
+## References
 
- - [Terraform remote state management]
+ - [Terraform Backend S3]
  - [GitHub Actions]
 
-License:
- - tbd
+## License
+
+© 2023 [Brian Chadwick](https://github.com/chadwickcloudservices)
 
 
-
-[terraform remote state management]: https://developer.hashicorp.com/terraform/language/v1.5.x/settings/backends/s3
+[github actions]: https://docs.github.com/en/actions/quickstart
+[terraform backend s3]: https://developer.hashicorp.com/terraform/language/v1.5.x/settings/backends/s3
 [aws provider]: https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 [terraform]: https://www.terraform.io
 [tls provider]: https://registry.terraform.io/providers/hashicorp/tls/latest/docs
