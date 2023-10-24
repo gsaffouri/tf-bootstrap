@@ -1,6 +1,6 @@
 # tf-bootstrap
 
-### This repository is used to deploy Terraform remote state management and GitHub Actions resources to an AWS account
+### This repository prepares an AWS account for Terraform remote state management and GitHub Actions
 
 Terraform remotes state management docs: https://developer.hashicorp.com/terraform/language/v1.5.x/settings/backends/s3
 
