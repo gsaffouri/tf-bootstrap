@@ -40,7 +40,7 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 ## License
 
 © 2023 [Brian Chadwick](https://github.com/chadwickcloudservices)
-
+Made available under the terms of the [Apache License 2.0].
 
 [github actions]: https://docs.github.com/en/actions/quickstart
 [terraform backend s3]: https://developer.hashicorp.com/terraform/language/v1.5.x/settings/backends/s3
