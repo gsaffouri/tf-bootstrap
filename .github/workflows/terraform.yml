@@ -78,7 +78,7 @@ on:
 #   contents: read # This is required for actions/checkout
 
 jobs:
-  terraform fmt:
+  terraform-fmt:
     name: 'Terraform Format (Lint)'
     runs-on: ubuntu-latest
     steps:
