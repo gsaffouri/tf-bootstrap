@@ -23,7 +23,7 @@ License:
  - tbd
 
 
-Terraform remotes state management docs: https://developer.hashicorp.com/terraform/language/v1.5.x/settings/backends/s3
+Terraform remote state management docs: https://developer.hashicorp.com/terraform/language/v1.5.x/settings/backends/s3
 
 Terraform modules used: https://registry.terraform.io/modules/unfunco/oidc-github/aws/latest
 
