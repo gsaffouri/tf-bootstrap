@@ -6,12 +6,20 @@
 Prepares an AWS account for Terraform remote state management and GitHub Actions
 
 ### Requirements
+
 - [AWS Provider] ~> 5.20
 - [TLS Provider] ~> 3.0
 - [Terraform] ~> 1.5.0
+- [AWS CLI] ~> 2.7
+
+### Assumptions
+
+- You're running this from a *nix Operating System
+- You have the proper permissions to deploy the referenced resources in your AWS account
+- You have the above mentioned version of Terraform and AWS CLI installed
 
 ### Installation and usage
-1. Authenticate to aws account
+1. [Establish AWS CLI authentication]
 2. Run deploy-tf.sh script
 3. Refer to amazon-eks 
 
@@ -47,3 +55,5 @@ Made available under the terms of the [Apache License 2.0].
 [aws provider]: https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 [terraform]: https://www.terraform.io
 [tls provider]: https://registry.terraform.io/providers/hashicorp/tls/latest/docs
+[aws cli]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
+[Establish AWS CLI authentication]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-authentication.html
