@@ -1,9 +1,9 @@
 # tf-bootstrap
 
 [![CI](https://github.com/chadwickcloudservices/tf-bootstrap/actions/workflows/terraform.yml/badge.svg)](https://github.com/unfunco/terraform-aws-oidc-github/actions/workflows/ci.yaml)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-purple.svg)](https://opensource.org/licenses/Apache-2.0)
 
-CI badge
-License badge
+
 
 This repository prepares an AWS account for Terraform remote state management and GitHub Actions
 
