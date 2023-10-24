@@ -18,9 +18,13 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 - You have the proper permissions to deploy the referenced resources in your AWS account
 - You have the above mentioned version of Terraform and AWS CLI installed
 
-### Installation and usage
+### Usage
+
 1. [Establish AWS CLI authentication]
-2. Run deploy-tf.sh script
+2. Execute the  deploy-tf.sh script with the '-p' flag
+```bash
+./deploy-tf.sh -p
+```
 3. Refer to amazon-eks 
 
 ## Resources
