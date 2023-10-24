@@ -1,6 +1,9 @@
 # tf-bootstrap
 
-### This repository prepares an AWS account for Terraform remote state management and GitHub Actions
+CI badge
+License badge
+
+This repository prepares an AWS account for Terraform remote state management and GitHub Actions
 
 Terraform remotes state management docs: https://developer.hashicorp.com/terraform/language/v1.5.x/settings/backends/s3
 

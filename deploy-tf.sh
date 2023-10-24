@@ -1,14 +1,17 @@
 #!/bin/bash -e
 
 # Adds custom flag(s) to script
-while getopts 'p' OPTION; do
+while getopts 'pf' OPTION; do
   case "$OPTION" in
     # Use this option to execute 'terraform apply'
     p)
       argP="push"
       ;;
+    f)
+      argF="fmt"
+      ;;
     ?)
-      echo "Usage: $(basename $0) [-m argument] [-d]"
+      echo "Usage: $(basename $0) [-p] [-f]"
       exit 1
       ;;
   esac
@@ -17,8 +20,14 @@ done
 # Removes temporary files
 ./cleanup-tf.sh
 
-# Copies main.tf file using local backend
-cp resources/main-local-backend.tf main.tf
+if [ -n "$argF" ]
+then
+  # Moving *.tf files to the root of the directory
+  mv resources/*.tf .
+else
+  # Copies main.tf file using local backend
+  cp resources/main-local-backend.tf main.tf
+fi
 
 # Executes 'terraform apply' if the '-p' flag is used
 if [ -n "$argP" ]

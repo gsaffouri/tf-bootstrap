@@ -27,7 +27,7 @@ resource "random_id" "this" {
 
 resource "aws_s3_bucket" "backend" {
   bucket = "terraform-remote-state-${random_id.this.hex}"
-  
+
   tags = {
     Name        = "backend_bucket"
     Environment = "Dev"
