@@ -23,7 +23,7 @@ done
 if [ -n "$argF" ]
 then
   # Moving *.tf files to the root of the directory
-  mv resources/*.tf .
+  mv resources/main-remote-backend.tf .
 else
   # Copies main.tf file using local backend
   cp resources/main-local-backend.tf main.tf
