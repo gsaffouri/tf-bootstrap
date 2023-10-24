@@ -6,6 +6,15 @@ terraform {
     }
   }
   required_version = "~> 1.5.0"
+
+  # Remote state configs
+  backend "s3" {
+    bucket         = "terraform-remote-state-90a1e8a6"
+    key            = "state/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    dynamodb_table = "terraform_state"
+  }
 }
 
 provider "aws" {
