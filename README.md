@@ -1,5 +1,7 @@
 # tf-bootstrap
 
+[![CI](https://github.com/chadwickcloudservices/tf-bootstrap/actions/workflows/terraform.yml/badge.svg)](https://github.com/unfunco/terraform-aws-oidc-github/actions/workflows/ci.yaml)
+
 CI badge
 License badge
 
