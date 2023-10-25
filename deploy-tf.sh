@@ -24,7 +24,7 @@ done
 # Removes temporary files
 ./cleanup-tf.sh
 
-if [ -n "$argF" ]
+if [ -n "$argF" ] || [ -n "$argP" ]
 then
   # Copies main.tf file using local backend
   cp resources/main-local-backend.tf main.tf
