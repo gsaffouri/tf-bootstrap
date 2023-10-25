@@ -44,10 +44,6 @@
 
 name: CI
 
-# env:
-#   AWS_REGION: "us-east-1"
-#   AWS_ACCOUNT_ID: "246185690786" # Ensure the AWS Account is accurate!
-
 on:
   push:
     branches: [ "main" ]
@@ -73,32 +69,15 @@ on:
         type: environment
         required: true
 
-# permissions:
-#   id-token: write # This is required for requesting the JWT
-#   contents: read # This is required for actions/checkout
-
 jobs:
   terraform-fmt:
     name: 'Terraform Format (Lint)'
     runs-on: ubuntu-latest
     steps:
-    
+
     # git clone repository
     - name: Checkout code
       uses: actions/checkout@v3
-    
-    # # Assume role in AWS account
-    # - name: Configure AWS credentials
-    #   uses: aws-actions/configure-aws-credentials@v2
-    #   with:
-    #     aws-region: ${{ env.AWS_REGION }}
-    #     role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/github
-    #     role-session-name: GitHub_to_AWS_via_FederatedOIDC
-    
-    # # Declare AWS IAM role assumed
-    # - name: STS GetCallerIdentity
-    #   run: |
-    #     aws sts get-caller-identity
 
     # Install the latest (fully opensource) version of Terraform CLI
     - name: Setup Terraform
@@ -118,11 +97,3 @@ jobs:
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Linting (Terraform Format)
       run: terraform fmt -check
-
-    # # Generates an execution plan for Terraform
-    # - name: Terraform Plan
-    #   run: terraform plan -input=false
-
-    #   # On push to "main", build or change infrastructure according to Terraform configuration files
-    # - name: Terraform Apply
-    #   run: terraform apply -auto-approve -input=false
