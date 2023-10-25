@@ -61,4 +61,7 @@ then
 
   # Update backend block with s3 bucket name
   sed -i "s/UPDATE_ME/$BUCKET_NAME/g" main.tf
+
+  # Initialized Terraform
+  terraform init
 fi
