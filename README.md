@@ -1,6 +1,6 @@
 # tf-bootstrap
 
-[![CI](https://github.com/chadwickcloudservices/tf-bootstrap/actions/workflows/ci.yml/badge.svg)](https://github.com/chadwickcloudservices/tf-bootstrap/actions/workflows/ci.yml)
+[![Linting](https://github.com/chadwickcloudservices/tf-bootstrap/actions/workflows/linting.yml/badge.svg)](https://github.com/chadwickcloudservices/tf-bootstrap/actions/workflows/linting.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-purple.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Prepares an AWS account for Terraform remote state management and GitHub Actions
