@@ -49,6 +49,9 @@ then
 
   # Copies state data to the s3 bucket
   terraform init -force-copy
+
+  # Removes temporary files
+  ./cleanup-tf.sh
 fi
 
 # Prepares main.tf if the '-u' flag is used
@@ -65,7 +68,4 @@ then
 
   # Initialized Terraform
   terraform init
-
-  # Removes temporary files
-  ./cleanup-tf.sh
 fi
