@@ -65,4 +65,7 @@ then
 
   # Initialized Terraform
   terraform init
+
+  # Removes temporary files
+  ./cleanup-tf.sh
 fi
