@@ -42,13 +42,13 @@ then
 
   # Return remote state s3 bucket name from output
   BUCKET_NAME=$(terraform output -raw aws_s3_bucket)
- 
+
   # Copies main.tf file using remote backend
   cp resources/main-remote-backend.tf main.tf
- 
+
   # Update backend block with s3 bucket name
   sed -i "s/UPDATE_ME/$BUCKET_NAME/g" main.tf
- 
+
   # Copies state data to the s3 bucket
   terraform init -force-copy
 fi
@@ -61,7 +61,7 @@ then
 
   # Copies main.tf file using remote backend
   cp resources/main-remote-backend.tf main.tf
- 
+
   # Update backend block with s3 bucket name
   sed -i "s/UPDATE_ME/$BUCKET_NAME/g" main.tf
 fi
