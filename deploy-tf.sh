@@ -3,7 +3,7 @@
 # Adds custom flag(s) to script
 while getopts 'pfu' OPTION; do
   case "$OPTION" in
-    # Use this option to execute 'terraform apply'
+    # This option is used to execute 'terraform apply'
     p)
       argP="push"
       ;;
@@ -11,6 +11,7 @@ while getopts 'pfu' OPTION; do
     f)
       argF="fmt"
       ;;
+    # This option is used to prepare main.tf for existing deployment
     u)
       argU="update"
       ;;
