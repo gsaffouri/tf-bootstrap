@@ -5,13 +5,6 @@
 
 Prepares an AWS account for Terraform remote state management and GitHub Actions OpenID Connect
 
-### Requirements
-
-- [AWS Provider] ~> 5.20
-- [TLS Provider] ~> 3.0
-- [Terraform] ~> 1.5.0
-- [AWS CLI] ~> 2.7
-
 ### Assumptions
 
 - You're running this from a *nix Operating System
@@ -53,7 +46,15 @@ terraform output -raw aws_s3_bucket
 
 ![alt text](resources/tf-bootstrap.png)
 
-## Resources
+### Requirements
+
+| Name                                                                                     | Version  |
+| -----------------------------------------------------------------------------------------|----------|
+| [aws provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)        | ~> 5.20  |
+| [terraform](https://developer.hashicorp.com/terraform/downloads)                         | ~> 1.5.7 |
+| [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) | ~> 2.7   |
+
+### Resources
 
 | Name                                                                                                                                                 | Type        |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
@@ -64,18 +65,18 @@ terraform output -raw aws_s3_bucket
 | [aws_s3_bucket_versioning.backend](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_versioning)                 | resource    |
 | [random_id.this](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/id)                                                  | resource    |
 
-## External Modules
+### External Modules
 
 | Name | Version |
 | ------------------------------------------------------------------------------------|-------|
 | [oidc-github](https://registry.terraform.io/modules/unfunco/oidc-github/aws/latest) | 1.6.0 |
 
-## References
+### References
 
  - [Terraform Backend S3]
  - [GitHub Actions]
 
-## License
+### License
 
 © 2023 [Brian Chadwick](https://github.com/chadwickcloudservices)
 Made available under the terms of the [Apache License 2.0].
