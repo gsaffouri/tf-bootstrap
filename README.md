@@ -7,7 +7,6 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 
 ### Assumptions
 
-- You're running this from a *nix Operating System
 - You have the proper permissions to deploy the referenced resources in your AWS account
 - You have the above mentioned version of Terraform and AWS CLI installed
 
@@ -83,8 +82,6 @@ Made available under the terms of the [Apache License 2.0].
 
 [github actions]: https://docs.github.com/en/actions/quickstart
 [terraform backend s3]: https://developer.hashicorp.com/terraform/language/v1.5.x/settings/backends/s3
-[aws provider]: https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 [terraform]: https://www.terraform.io
-[tls provider]: https://registry.terraform.io/providers/hashicorp/tls/latest/docs
 [aws cli]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
 [Establish AWS CLI authentication]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-authentication.html
