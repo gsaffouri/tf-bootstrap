@@ -14,7 +14,7 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 
 1. [Establish AWS CLI authentication]
 2. Clone this repository and navigate to the root
-3. Execute the  deploy-tf.sh script with the '-p' flag
+3. Deploy resources by executing the deploy-tf.sh script with the '-p' flag
 ```bash
 ./deploy-tf.sh -p
 
