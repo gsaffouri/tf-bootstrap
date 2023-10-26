@@ -21,12 +21,13 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 ### Usage
 
 1. [Establish AWS CLI authentication]
-2. Execute the  deploy-tf.sh script with the '-p' flag
+2. Clone this repository and navigate to the root
+3. Execute the  deploy-tf.sh script with the '-p' flag
 ```bash
 ./deploy-tf.sh -p
 ```
-3. The AWS account is now ready to properly store Terraform state files
-4. You can return the AWS S3 bucket name using either of the below commands
+4. The AWS account is now ready to properly store Terraform state files
+5. You can return the AWS S3 bucket name using either of the below commands
 ```bash
 # aws cli
 aws s3 ls | grep terraform-remote-state | cut -d " " -f 3
@@ -36,7 +37,7 @@ or
 # terraform cli
 terraform output -raw aws_s3_bucket
 ```
-5. deploy-tf.sh full functionality
+6. deploy-tf.sh full functionality
 ```bash
 # 'p' flag is used for initial deployment
 ./deploy-tf.sh -p
