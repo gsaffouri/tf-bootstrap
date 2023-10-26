@@ -17,6 +17,8 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 3. Execute the  deploy-tf.sh script with the '-p' flag
 ```bash
 ./deploy-tf.sh -p
+
+# After the s3 bucket is created, the local state file will be moved to the s3 bucket
 ```
 4. The AWS account is now ready to properly store Terraform state files
 5. You can return the AWS S3 bucket name using either of the below commands
