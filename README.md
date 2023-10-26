@@ -8,7 +8,7 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 ### Assumptions
 
 - You have the proper permissions to deploy the referenced resources in your AWS account
-- You have the above mentioned version of Terraform and AWS CLI installed
+- You have the version of Terraform and AWS CLI referenced in the [Requirements](https://github.com/chadwickcloudservices/tf-bootstrap#requirements) section
 
 ### Usage
 
