@@ -31,7 +31,7 @@ or
 # terraform cli
 terraform output -raw aws_s3_bucket
 ```
-6. deploy-tf.sh (extended functionality for information purposes!)
+6. deploy-tf.sh (extended functionality for informational purposes)
 ```bash
 # 'p' flag is used for initial deployment
 ./deploy-tf.sh -p
