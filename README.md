@@ -23,14 +23,15 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 7. Remaining steps will occur within your local development environment
 8. [Establish AWS CLI authentication]
 9.  Clone your forked version of this repository and navigate to the root
-10. Deploy resources by executing the deploy-tf.sh script with the '-p' flag
+10. Update line 6 in oidc.tf to match the "GitHub Org / Repository" of your forked version
+11. Deploy resources by executing the deploy-tf.sh script with the '-p' flag
 ```bash
 ./deploy-tf.sh -p
 
 # After the s3 bucket is created, the local state file will be moved to the s3 bucket
 ```
-11. The AWS account is now ready to properly store Terraform state files
-12. You can return the AWS S3 bucket name using either of the below commands
+12. The AWS account is now ready to properly store Terraform state files
+13. You can return the AWS S3 bucket name using either of the below commands
 ```bash
 # aws cli
 aws s3 ls | grep terraform-remote-state | cut -d " " -f 3
@@ -40,7 +41,7 @@ or
 # terraform cli
 terraform output -raw aws_s3_bucket
 ```
-13. deploy-tf.sh (extended functionality for informational purposes)
+14. deploy-tf.sh (extended functionality for informational purposes)
 ```bash
 # 'p' flag is used to deploy resources to an aws account using GitHub Actions
 ./deploy-tf.sh -p
