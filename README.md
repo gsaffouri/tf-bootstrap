@@ -19,9 +19,10 @@ Prepares an AWS account for Terraform remote state management and GitHub Actions
 4. Select the "Linting" workflow on the left pane
 5. Select "Enable workflow"
 6. Select "Run workflow" > "Run workflow"
+   1. This will execute the "Linting" pipeline
 7. Remaining steps will occur within your local development environment
 8. [Establish AWS CLI authentication]
-9. Clone this repository and navigate to the root
+9.  Clone this repository and navigate to the root
 10. Deploy resources by executing the deploy-tf.sh script with the '-p' flag
 ```bash
 ./deploy-tf.sh -p
