@@ -77,16 +77,27 @@ fi
 if [ -n "$argD" ]
 then
   # Return remote state s3 bucket name from output
-  # BUCKET_NAME=$(aws s3 ls | grep terraform-remote-state | cut -d " " -f 3)
+  BUCKET_NAME=$(aws s3 ls | grep terraform-remote-state | cut -d " " -f 3)
 
   # Copies main.tf file using remote backend
-  cp resources/main-local-backend.tf main.tf
+  cp resources/main-remote-backend.tf main.tf
 
   # Update backend block with s3 bucket name
-  # sed -i "s/UPDATE_ME/$BUCKET_NAME/g" main.tf
+  sed -i "s/UPDATE_ME/$BUCKET_NAME/g" main.tf
 
-  # Initialized Terraform
+  # Initialize and create local tfstate file
+  terraform init
+  terraform state pull > terraform.tfstate
+
+  # Copy main.tf with no remote state configured
+  cp resources/main-local-backend.tf main.tf
+
+  # Migrate the state from remote to local
   terraform init -migrate-state
-  # terraform init -force-copy
-  # terraform destroy --auto-approve
+
+  # Empty the S3 bucket
+  aws s3api delete-objects --bucket "$BUCKET_NAME" --delete "$(aws s3api list-object-versions --bucket ${BUCKET_NAME} --output=json --query='{Objects: Versions[].{Key:Key,VersionId:VersionId}}')"
+
+  # Destroy resources
+  terraform destroy --auto-approve
 fi
