@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Adds custom flag(s) to script
-while getopts 'pfu' OPTION; do
+while getopts 'pfud' OPTION; do
   case "$OPTION" in
     # This option is used to execute 'terraform apply'
     p)
@@ -15,8 +15,11 @@ while getopts 'pfu' OPTION; do
     u)
       argU="update"
       ;;
+    d)
+      argD="destroy"
+      ;;
     ?)
-      echo "Usage: $(basename $0) [-p] [-f] [-u]"
+      echo "Usage: $(basename $0) [-p] [-f] [-u] [-d]"
       exit 1
       ;;
   esac
@@ -83,6 +86,6 @@ then
   sed -i "s/UPDATE_ME/$BUCKET_NAME/g" main.tf
 
   # Initialized Terraform
-  terraform init -force-copy
-  terraform destroy --auto-approve
+  # terraform init -force-copy
+  # terraform destroy --auto-approve
 fi
