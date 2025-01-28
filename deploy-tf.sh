@@ -100,4 +100,7 @@ then
 
   # Destroy resources
   terraform destroy --auto-approve
+
+  # Removes temporary files
+  ./cleanup-tf.sh
 fi

@@ -51,6 +51,9 @@ terraform output -raw aws_s3_bucket
 
 # 'u' flag is used to prepare the main.tf file for existing deployments
 ./deploy-tf.sh -u
+
+# 'd' flag is used to destroy all resources
+./deploy-tf.sh -u
 ```
 
 ### Example Output
