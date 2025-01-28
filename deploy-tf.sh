@@ -69,3 +69,20 @@ then
   # Initialized Terraform
   terraform init
 fi
+
+# Prepares main.tf if the '-d' flag is used
+if [ -n "$argD" ]
+then
+  # Return remote state s3 bucket name from output
+  BUCKET_NAME=$(aws s3 ls | grep terraform-remote-state | cut -d " " -f 3)
+
+  # Copies main.tf file using remote backend
+  cp resources/main-local-backend.tf main.tf
+
+  # Update backend block with s3 bucket name
+  sed -i "s/UPDATE_ME/$BUCKET_NAME/g" main.tf
+
+  # Initialized Terraform
+  terraform init -force-copy
+  terraform destroy --auto-approve
+fi
